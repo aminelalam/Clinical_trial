@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/c/Users/amine/Downloads/**)",
+      "Bash(bash scripts/download_trec.sh)"
+    ]
+  }
+}

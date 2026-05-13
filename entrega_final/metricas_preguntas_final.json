@@ -1,0 +1,12 @@
+{
+  "mode": "rubric",
+  "n_questions": 2189,
+  "mean_score": 0.9139333028780265,
+  "per_dimension": {
+    "specific": 1.0,
+    "temporal": 1.0,
+    "format": 0.7846048423937871,
+    "rationale": 0.955459113750571,
+    "actionable": 0.8296025582457743
+  }
+}

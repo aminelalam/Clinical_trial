@@ -1,0 +1,14 @@
+[
+  {
+    "topic_id": "t1",
+    "text": "47-year-old woman with metastatic HER2+ breast cancer, ECOG 1, no prior trastuzumab. CBC within normal range. No history of brain metastases."
+  },
+  {
+    "topic_id": "t2",
+    "text": "62-year-old man with stage IV NSCLC harboring an EGFR exon 19 deletion. Prior treatment with osimertinib (12 months) with progression. ECOG 1. No active CNS disease."
+  },
+  {
+    "topic_id": "t3",
+    "text": "8-year-old boy with newly diagnosed B-cell ALL. WBC 25,000. CSF negative. No prior chemotherapy. ECOG 0."
+  }
+]

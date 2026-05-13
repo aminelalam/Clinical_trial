@@ -1,0 +1,84 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.python-version
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.cover
+.tox/
+
+# Caches
+.cache/
+.cache_*/
+.diskcache/
+.huggingface/
+.hf_cache/
+.test_tmp/
+
+# Few-shot bank scratch space (drafts that should not be loaded by FewShotBank)
+banco_few_shot/_drafts/
+
+# Data (heavy, never commit)
+data/ctgov_snapshot/
+data/trec_ct/topics_*.xml
+data/trec_ct/qrels_*.txt
+data/trec_ct/topics_*.json
+data/trec_ct/raw/
+data/trec_ct/downloads/
+*.zip
+data/trec_ct/clinical_trials_*/
+data/mesh/desc*.xml
+data/mesh/supp*.xml
+data/mesh/*.gz
+data/indices/
+
+# Predictions & runs
+predictions_*.json
+runs/
+mlruns/
+results/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Memoria intermediates
+memoria/*.pdf
+memoria/figures/*.png
+memoria/figures/*.pdf
+
+# Logs
+*.log
+logs/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Docker volumes
+qdrant_storage/
+postgres_data/

@@ -1,0 +1,71 @@
+# {{ d.metadata.title or d.nct_id }}
+**NCT id**: {{ d.nct_id }}  ·  **Rank**: {{ d.rank }}  ·  **Score**: {{ '%.3f' % d.score }}
+**Phase**: {{ d.metadata.phase }}  ·  **Status**: {{ d.metadata.status }}  ·  **Sponsor**: {{ d.metadata.sponsor or '(unknown)' }}
+{% if d.metadata.last_update %}**Last updated**: {{ d.metadata.last_update }}  ·  {% endif %}**Link**: {{ d.metadata.ctgov_url }}
+
+## Executive summary
+{{ d.executive_summary or '(no summary available)' }}
+
+## Score breakdown
+| Component | Value |
+|---|---|
+| Eligibility | {{ '%.3f' % d.score_breakdown.eligibility_score }} |
+| Recruiting bonus | {{ '%.3f' % d.score_breakdown.recruiting_bonus }} |
+| Phase alignment | {{ '%.3f' % d.score_breakdown.phase_alignment }} |
+| Recency | {{ '%.3f' % d.score_breakdown.recency }} |
+| Geographic proximity | {{ '%.3f' % d.score_breakdown.geographic_proximity }} |
+| NEI penalty | {{ '%.3f' % d.score_breakdown.nei_penalty }} |
+| Confidence adjustment | {{ '%.3f' % d.score_breakdown.confidence_adjustment }} |
+| Mandatory veto | {{ 'YES' if d.score_breakdown.mandatory_veto else 'no' }} |
+| **Total** | **{{ '%.3f' % d.score_breakdown.total }}** |
+
+## Eligibility summary
+- Inclusion: {{ d.eligibility_counts.inclusion_met }}/{{ d.eligibility_counts.inclusion_total }} met,
+  {{ d.eligibility_counts.inclusion_not_met }} not met,
+  {{ d.eligibility_counts.inclusion_nei }} NEI.
+- Exclusion: {{ d.eligibility_counts.exclusion_not_met }}/{{ d.eligibility_counts.exclusion_total }} clear,
+  {{ d.eligibility_counts.exclusion_met }} met (excluding),
+  {{ d.eligibility_counts.exclusion_nei }} NEI.
+
+## Criteria
+| ID | Polarity | Type | Text | Decision | Confidence | Evidence |
+|---|---|---|---|---|---|---|
+{% for r in d.eligibility_table -%}
+| {{ r.id }} | {{ r.polarity }} | {{ r.type }} | {{ (r.text or '')|replace('\n', ' ')|truncate(140) }} | **{{ r.label.value }}** | {{ '%.2f' % r.confidence }} | {{ (r.evidence or '')|replace('\n', ' ')|truncate(120) }} |
+{% endfor %}
+
+{% if d.missing_information %}
+## Missing information (questions for the clinician)
+{% for q in d.missing_information -%}
+- **[{{ q.priority.value | upper }}]** ({{ q.trial_id }}/{{ q.criterion_id }}) {{ q.question_text }}
+  - Data point: {{ q.data_point }}{% if q.units %} ({{ q.units }}){% endif %}
+{% if q.time_window %}  - Time window: {{ q.time_window }}{% endif %}
+{% if q.measurement_context %}  - Context: {{ q.measurement_context }}{% endif %}
+  - Why: {{ q.rationale }}
+{% endfor %}
+{% endif %}
+
+{% if d.attention_flags %}
+## Attention flags
+{% for f in d.attention_flags -%}
+- **[{{ f.severity.value | upper }}]** ({{ f.category }}) {{ f.message }}
+{% endfor %}
+{% endif %}
+
+## Trial information
+- **Locations**: {{ d.metadata.locations_summary }}
+{% if d.metadata.contact_summary %}
+- **Contact**: {{ d.metadata.contact_summary }}
+{% endif %}
+
+{% if d.judge_rationale %}
+## Judge rationale
+{{ d.judge_rationale }}
+{% endif %}
+
+{% if d.critique_notes %}
+## Critique notes
+{% for n in d.critique_notes -%}
+- {{ n }}
+{% endfor %}
+{% endif %}

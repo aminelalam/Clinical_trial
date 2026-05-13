@@ -1,0 +1,12 @@
+{
+  "corpus_dir": "data\\trec_ct\\clinical_trials_2021_04_27",
+  "created_at": "2026-05-12T22:09:28.054081+00:00",
+  "doc_count": 375580,
+  "file_count": 375580,
+  "filters_applied": [],
+  "manifest_type": "trial_matcher_benchmark_corpus",
+  "snapshot_date": "2021-04-27",
+  "source": "TREC Clinical Trials 2021",
+  "source_format": "ctgov_legacy_xml",
+  "version": 1
+}
