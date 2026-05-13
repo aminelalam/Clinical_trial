@@ -4,7 +4,7 @@ Trial Matcher es un agente de Inteligencia Artificial que conecta automáticamen
 
 ## 1. Dependencias y Configuración
 
-El proyecto requiere **Python >=3.11, <3.14**.
+El proyecto requiere Python >=3.11, <3.14.
 
 ### Entorno virtual e instalación
 ```powershell
@@ -22,7 +22,7 @@ copy .env.example .env
 ```
 
 ### Descarga de Datos e Índices (TREC 2021)
-Para reproducir los resultados, descarga el *snapshot* clínico y construye el índice BM25:
+Para reproducir los resultados, descarga el snapshot clínico y construye el índice BM25:
 ```powershell
 bash scripts/download_trec.sh
 python scripts\download_trec_ct_snapshot.py
@@ -32,7 +32,7 @@ python scripts\build_fielded_bm25_index.py --ctgov-dir data\trec_ct\clinical_tri
 ## 2. Comandos de Ejecución
 
 ### Ejecución de la entrega final (Reproducción completa)
-Para procesar los 75 pacientes del benchmark, evaluarlos y generar tanto las predicciones como los *dossiers*:
+Para procesar los 75 pacientes del benchmark, evaluarlos y generar tanto las predicciones como los dossiers:
 ```powershell
 python scripts\run_final_delivery.py --overwrite
 ```
