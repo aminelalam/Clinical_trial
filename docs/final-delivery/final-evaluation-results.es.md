@@ -2,7 +2,7 @@
 
 Fecha de cierre: 2026-05-13  
 Run final: `results/experiments/FINAL_DELIVERY_TREC2021_P12_FULL_75`  
-Predicciones finales: `entrega_final/predicciones_trec2021_final.json`
+Predicciones finales: `docs/final-delivery/trec2021-final-predictions.json`
 
 ## Configuracion aceptada
 
@@ -25,7 +25,7 @@ La configuracion final usa el baseline P11 aceptado y anade P12 como ajuste de r
 | P12 final 75 | 0.520406 | 0.094129 | 0.630667 | 0.080258 | 0.763815 |
 | Delta P12 - P11 | +0.003271 | +0.000000 | +0.000000 | -0.000011 | +0.019111 |
 
-El evaluador final es `pytrec_eval`, instalado y validado tras la corrida. Tambien se conserva el fallback en `entrega_final/metricas_trec_pure_python_final.json` para trazabilidad.
+El evaluador final es `pytrec_eval`, instalado y validado tras la corrida. Tambien se conserva el fallback en `docs/final-delivery/trec-pure-python-metrics-final.json` para trazabilidad.
 
 ## Score Hackaton
 

@@ -2,7 +2,7 @@
 
 Fecha: 2026-05-13  
 Proyecto: agente no interactivo para matching paciente-ensayo clinico sobre TREC Clinical Trials 2021  
-Entrega principal: `entrega_final/predicciones_trec2021_final.json`
+Entrega principal: `docs/final-delivery/trec2021-final-predictions.json`
 
 ## 1. Resumen Ejecutivo
 
@@ -22,7 +22,7 @@ El objetivo inmediato era producir una entrega final sobre TREC Clinical Trials 
 
 El formato final de prediccion es JSON. Cada topic contiene `ranked_trials` con `nct_id`, `rank`, `score`, `label`, `predicted_trec_qrel`, el alias historico `trec_qrel`, rationale, conteos de inclusion/exclusion, fraccion NEI, componentes de score y marcas de fill. El campo oficial de prediccion es `predicted_trec_qrel`; `trec_qrel` queda como alias retrocompatible y no debe interpretarse como gold. Cada topic tambien incluye `questions`, `dossiers`, `stats` y `diagnostics`.
 
-La entrega copia el JSON final a `entrega_final/predicciones_trec2021_final.json`. La ejecucion no interactiva queda documentada en `entrega_final/COMO_EJECUTAR_ENTREGA.md`.
+La entrega copia el JSON final a `docs/final-delivery/trec2021-final-predictions.json`. La ejecucion no interactiva queda documentada en `docs/final-delivery/how-to-run-final-delivery.es.md`.
 
 ## 3. Arquitectura del Agente
 
@@ -148,7 +148,7 @@ Clase 0 sigue siendo el area mas debil: precision perfecta en las pocas activaci
 
 ## 8. Reproducibilidad
 
-El comando reproducible esta en `COMO_EJECUTAR_ENTREGA.md`. La corrida es no interactiva: toma la lista de topics desde XML, ejecuta el agente y produce JSON. Los artefactos copiados a `entrega_final` son los que deben usarse para entrega.
+El comando reproducible esta en `how-to-run-final-delivery.es.md`. La corrida es no interactiva: toma la lista de topics desde XML, ejecuta el agente y produce JSON. Los artefactos copiados a `docs/final-delivery` son los que deben usarse para entrega.
 
 Validacion tecnica final:
 

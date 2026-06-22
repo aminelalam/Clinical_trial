@@ -148,7 +148,7 @@ Si abres la carpeta del código, debes entender cómo navegar:
 - `src/trial_matcher/eligibility/`: Aquí está el código que invoca al LLM, le pasa la plantilla de evaluación médica y usa Pydantic para forzar respuestas estrictas.
 - `src/trial_matcher/ranking/`: Los algoritmos matemáticos (scorer.py, P12) que cogen las evaluaciones y ordenan la lista final.
 - `eval/`: Scripts independientes para comparar tus predicciones JSON contra los *qrels* (los juicios humanos oficiales de la universidad/NIST) y calcular el NDCG, Recall, etc.
-- `entrega_final/`: La copia inmutable de los artefactos, los informes (`.md`) y el `predictions.json` definitivo.
+- `docs/final-delivery/`: La copia inmutable de los artefactos, los informes (`.md`) y el `predictions.json` definitivo.
 
 ---
 **Conclusión:** Trial Matcher es una pieza de ingeniería agéntica de vanguardia. Separa perfectamente la fuerza bruta de búsqueda escalar (Lexical BM25) del razonamiento semántico profundo (LLMs), fusionándolos con heurísticas médicas deterministas y ranking probabilístico.

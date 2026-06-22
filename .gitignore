@@ -25,6 +25,7 @@ venv/
 htmlcov/
 *.cover
 .tox/
+.claude/
 
 # Caches
 .cache/
@@ -67,11 +68,6 @@ results/
 .DS_Store
 Thumbs.db
 
-# Memoria intermediates
-memoria/*.pdf
-memoria/figures/*.png
-memoria/figures/*.pdf
-
 # Logs
 *.log
 logs/
@@ -81,4 +77,10 @@ logs/
 
 # Docker volumes
 qdrant_storage/
+qdrant_snapshots/
 postgres_data/
+
+# Documentation build outputs
+docs/**/*.pdf
+docs/**/figures/*.png
+docs/**/figures/*.pdf

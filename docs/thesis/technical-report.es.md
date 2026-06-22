@@ -1,7 +1,7 @@
 # Trial Matcher - Memoria tecnica
 
 Fecha: 2026-05-13  
-Entrega: `entrega_final/predicciones_trec2021_final.json`  
+Entrega: `docs/final-delivery/trec2021-final-predictions.json`  
 Benchmark: TREC Clinical Trials 2021, 75 topics
 
 ## 1. Resumen ejecutivo
@@ -99,7 +99,7 @@ python scripts\run_final_delivery.py --overwrite
 ```
 
 El comando completo equivalente queda registrado en
-`entrega_final/COMO_EJECUTAR_ENTREGA.md` y en `entrega_final/manifest_final.json`.
+`docs/final-delivery/how-to-run-final-delivery.es.md` y en `docs/final-delivery/manifest-final.json`.
 
 ## 4. Resultados
 

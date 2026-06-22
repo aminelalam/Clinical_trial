@@ -17,7 +17,7 @@ results/experiments/FINAL_DELIVERY_TREC2021_P12_FULL_75
 La version copiada para entrega es:
 
 ```text
-entrega_final/predicciones_trec2021_final.json
+docs/final-delivery/trec2021-final-predictions.json
 ```
 
 Para una comprobacion rapida sobre el topic 75, sin generar preguntas ni dossiers:
